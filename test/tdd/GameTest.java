@@ -26,5 +26,13 @@ class GameTest {
 		assertEquals("15-0", game.score());
 		
 	}
+	
+	@Test
+	void test3() {
+		game.playerOneScores();
+		game.playerOneScores();
+		assertEquals("30-0", game.score());
+		
+	}
 
 }
