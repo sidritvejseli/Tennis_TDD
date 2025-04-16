@@ -66,6 +66,23 @@ class GameTest {
 		assertEquals("Deuce", game.score());
 		
 	}
+	
+	@Test
+	void test7() {
+		game.playerOneScores();
+		game.playerOneScores();
+		game.playerOneScores();
+		game.playerTwoScores();
+		game.playerTwoScores();
+		game.playerTwoScores();
+		
+		game.playerOneScores(); //avantage
+		
+		System.out.println(game.score());
+		
+		assertEquals("Advantage Player 1", game.score());
+		
+	
 
 
-}
+}}
