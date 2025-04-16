@@ -6,7 +6,10 @@ public class Game {
 	private int playerTwoScore = 0;
 	
 	public Object score() {
-		// TODO Auto-generated method stub
+		if(playerOneScore == playerTwoScore && playerOneScore == 40) {
+			return "Deuce";
+		}
+		
 		return this.playerOneScore+"-"+this.playerTwoScore;
 	}
 
@@ -21,6 +24,12 @@ public class Game {
 	}
 
 	public void playerTwoScores() {
-		this.playerTwoScore+=15;
+		if(this.playerTwoScore<30) {
+			this.playerTwoScore+=15;
+		}
+		else {
+			this.playerTwoScore+=10;
+
+		}
 	}
 }
