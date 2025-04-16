@@ -43,6 +43,17 @@ class GameTest {
 		assertEquals("30-15", game.score());
 		
 	}
+	
+	@Test
+	void test5() {
+		game.playerOneScores();
+		game.playerOneScores();
+		game.playerOneScores();
+		game.playerTwoScores();
+		game.playerTwoScores();
+		assertEquals("40-30", game.score());
+		
+	}
 
 
 }
