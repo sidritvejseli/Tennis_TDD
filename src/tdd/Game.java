@@ -11,13 +11,22 @@ public class Game {
 	}
 
 	public void playerOneScores() {
-		this.p1Score+=15;
+		if(p1Score< 30) {
+			this.p1Score+=15;
+		}
+		else {
+			this.p1Score+=10;
+		}
 	}
 
 	public void playerTwoScores() {
-		this.p2Score+=15;
-	}
+		if(p2Score< 30) {
+			this.p2Score+=15;
+		}
+		else {
+			this.p2Score+=10;
+			}
 
 	
-
+	}
 }
