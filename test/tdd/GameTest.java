@@ -80,8 +80,6 @@ class GameTest {
 		
 		game.playerOneScores(); // point d'avantage
 		
-		System.out.println(game.score());
-
 		assertEquals("Advantage Player 1", game.score());
 		
 	}
@@ -96,7 +94,6 @@ class GameTest {
 		game.playerTwoScores();
 		
 		game.playerTwoScores(); // point d'avantage
-		System.out.println(game.score());
 
 		assertEquals("Advantage Player 2", game.score());
 		
@@ -114,7 +111,6 @@ class GameTest {
 		game.playerOneScores(); // point d'avantage
 		game.playerTwoScores(); // Deuce again
 		
-		System.out.println(game.score());
 
 		assertEquals("Deuce", game.score());
 		
@@ -132,8 +128,10 @@ class GameTest {
 		game.playerTwoScores(); // Deuce again
 		
 		game.playerOneScores(); //point final;
+		game.playerOneScores(); //point final;
+
 		
-		//System.out.println(game.score());
+		System.out.println(game.score());
 
 		assertEquals("Win Player 1", game.score());
 		

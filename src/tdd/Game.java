@@ -10,10 +10,18 @@ public class Game {
 	
 	private boolean isDeuce = false;
 	
-	private boolean isDeuceAgain = false;
+	private boolean p1Won = false;
+	private boolean p2Won = false;
 	
 	public String score() {
+	
+		if(p1Won) {
+			return "Win Player 1";
+		}
 		
+		else if(p2Won) {
+			return "Win Player 2";
+		}
 		
 		else if (isP1Advantage) {
 			return "Advantage Player 1";
@@ -47,6 +55,10 @@ public class Game {
 				isDeuce = true;
 				isP2Advantage = false;
 			}
+			
+			else if (isP1Advantage) {
+				p1Won = true;
+			}
 			this.p1Score+=10;
 		}
 	}
@@ -69,6 +81,9 @@ public class Game {
 				isDeuce = true;
 				isP1Advantage = false;
 
+			}
+			else if (isP2Advantage) {
+				p2Won = true;
 			}
 			this.p2Score+=10;
 			}
