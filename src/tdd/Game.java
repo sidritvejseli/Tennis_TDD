@@ -11,12 +11,17 @@ public class Game {
 	private boolean advantageP2 = false;
 	
 	public Object score() {
+		if(advantageP1 && advantageP2) {
+			return "Deuce";
+		}
 		
 		if(advantageP1) {
+			
 			return "Advantage Player 1";
 		}
 		
 		else if(advantageP2) {
+	
 			return "Advantage Player 2";
 		}
 		
@@ -35,11 +40,13 @@ public class Game {
 			this.playerOneScore+=15;
 		}
 		else {
-			if (playerTwoScore == 40) {
-				deuce = true;
-			}
-			else if(deuce) {
+			
+			if(deuce) {
 				advantageP1 =true;
+				deuce = false;
+			}
+			else if (playerTwoScore == 40) {
+				deuce = true;
 			}
 			
 			this.playerOneScore+=10;
@@ -52,16 +59,17 @@ public class Game {
 			this.playerTwoScore+=15;
 		}
 		else {
-			if (playerOneScore == 40) {
-				
-				deuce = true;
-			}
-			else if(deuce) {
+}
+			if(deuce) {
 				advantageP2 =true;
-			
+				deuce =false;
+			}
+			else if (playerOneScore == 40) {
+				deuce = true;
+				
 			this.playerTwoScore+=10;
 
 		}
 	}
-}
+
 }
