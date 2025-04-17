@@ -67,4 +67,37 @@ class GameTest {
 		assertEquals("Deuce", game.score());
 		
 	}
+	
+	@Test
+	void test7() {
+		game.playerOneScores();
+		game.playerOneScores();
+		game.playerTwoScores();
+		game.playerOneScores();
+		game.playerTwoScores();
+		game.playerTwoScores();
+		
+		game.playerOneScores(); // point d'avantage
+		
+		System.out.println(game.score());
+
+		assertEquals("Advantage Player 1", game.score());
+		
+	}
+	
+	@Test
+	void test7bis() {
+		game.playerOneScores();
+		game.playerOneScores();
+		game.playerTwoScores();
+		game.playerOneScores();
+		game.playerTwoScores();
+		game.playerTwoScores();
+		
+		game.playerTwoScores(); // point d'avantage
+		System.out.println(game.score());
+
+		assertEquals("Advantage Player 2", game.score());
+		
+	}
 }
