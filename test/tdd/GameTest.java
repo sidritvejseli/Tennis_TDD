@@ -20,5 +20,11 @@ class GameTest {
 		
 	}
 	
+	@Test
+	void test2() {
+		game.playerOneScores();
+		assertEquals("15-0", game.score());
+		
+	}
 
 }
