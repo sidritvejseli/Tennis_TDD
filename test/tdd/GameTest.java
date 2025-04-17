@@ -63,6 +63,7 @@ class GameTest {
 		game.playerOneScores();
 		game.playerTwoScores();
 		game.playerTwoScores();
+		
 
 		assertEquals("Deuce", game.score());
 		
@@ -116,6 +117,25 @@ class GameTest {
 		System.out.println(game.score());
 
 		assertEquals("Deuce", game.score());
+		
+	}
+	@Test
+	void test9() {
+		game.playerOneScores();
+		game.playerOneScores();
+		game.playerTwoScores();
+		game.playerOneScores();
+		game.playerTwoScores();
+		game.playerTwoScores();
+		
+		game.playerOneScores(); // point d'avantage
+		game.playerTwoScores(); // Deuce again
+		
+		game.playerOneScores(); //point final;
+		
+		//System.out.println(game.score());
+
+		assertEquals("Win Player 1", game.score());
 		
 	}
 }
